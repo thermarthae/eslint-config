@@ -1,0 +1,52 @@
+{
+	"name": "@thermarthae/eslint-config",
+	"version": "0.0.0",
+	"main": "index.js",
+	"description": "Just a personal eslint config",
+	"license": "MIT",
+	"author": "thermarthae <thermarthae@protonmail.com>",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thermarthae/eslint-config.git"
+	},
+	"files": [
+		"base.js",
+		"index.js",
+		"shared.js"
+	],
+	"engines": {
+		"node": ">=10"
+	},
+	"dependencies": {
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-airbnb-typescript": "^12.0.0"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.8.1",
+		"@typescript-eslint/parser": "^4.8.1",
+		"eslint": "^7.13.0",
+		"eslint-plugin-import": "^2.22.1",
+		"typescript": "^4.0.5"
+	},
+	"peerDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.0.0",
+		"@typescript-eslint/parser": "^4.0.0",
+		"eslint": "^7.0.0",
+		"eslint-plugin-import": "^2.0.0",
+		"eslint-plugin-jsx-a11y": "^6.0.0",
+		"eslint-plugin-react": "^7.0.0",
+		"eslint-plugin-react-hooks": "^4.0.0",
+		"typescript": "^4.0.0"
+	},
+	"peerDependenciesMeta": {
+		"eslint-plugin-jsx-a11y": {
+			"optional": true
+		},
+		"eslint-plugin-react": {
+			"optional": true
+		},
+		"eslint-plugin-react-hooks": {
+			"optional": true
+		}
+	}
+}
