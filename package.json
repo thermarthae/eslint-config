@@ -21,6 +21,11 @@
 		"update": "yarn set version latest",
 		"pnpify": "yarn dlx @yarnpkg/pnpify --sdk vscode"
 	},
+	"resolutions": {
+		"eslint-config-airbnb-typescript/@typescript-eslint/parser": "*",
+		"eslint-config-airbnb-typescript/eslint-config-airbnb": "*",
+		"eslint-config-airbnb-typescript/eslint-config-airbnb-base": "*"
+	},
 	"dependencies": {
 		"eslint-config-airbnb": "^18.2.1",
 		"eslint-config-airbnb-typescript": "^12.0.0"
