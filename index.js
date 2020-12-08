@@ -20,6 +20,7 @@ module.exports = {
 		'react/no-children-prop': 0,
 		'react/prop-types': 0,
 		'react/require-default-props': 0,
+		'react/state-in-constructor': ['error', 'never'],
 		'react/static-property-placement': ['error', 'static public field'],
 	},
 };
