@@ -8,6 +8,7 @@ module.exports = {
 		{
 			files: '*.tsx',
 			rules: {
+				'@typescript-eslint/member-ordering': 0, // `react/sort-comp` is handling this out
 				'consistent-return': 0, // annoys inside react hooks
 			},
 		},
