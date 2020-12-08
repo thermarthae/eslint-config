@@ -14,6 +14,7 @@ module.exports = {
 		},
 	],
 	rules: {
+		'react/destructuring-assignment': 0,
 		'react/jsx-indent': ['error', 'tab'],
 		'react/jsx-indent-props': ['error', 'tab'],
 		'react/jsx-props-no-spreading': 0,
