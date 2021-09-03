@@ -14,9 +14,6 @@
 		"index.js",
 		"shared.js"
 	],
-	"engines": {
-		"node": ">=10"
-	},
 	"packageManager": "yarn@3.0.2",
 	"scripts": {
 		"update": "yarn set version latest",
