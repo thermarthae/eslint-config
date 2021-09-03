@@ -42,9 +42,3 @@ module.exports = {
 +		},
 	};
 ```
-
-## 📝 License
-
-Copyright © 2020 [thermarthae](https://github.com/thermarthae).
-
-This project is [MIT](https://github.com/thermarthae/eslint-config/blob/master/LICENSE.md) licensed.
