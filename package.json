@@ -22,31 +22,27 @@
 		"update": "yarn set version latest",
 		"pnpify": "yarn dlx @yarnpkg/sdks vscode"
 	},
-	"resolutions": {
-		"eslint-config-airbnb-typescript/@typescript-eslint/parser": "*",
-		"eslint-config-airbnb-typescript/eslint-config-airbnb": "*",
-		"eslint-config-airbnb-typescript/eslint-config-airbnb-base": "*"
-	},
 	"dependencies": {
 		"eslint-config-airbnb": "^18.2.1",
-		"eslint-config-airbnb-typescript": "^12.0.0"
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-airbnb-typescript": "^14.0.0"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.8.1",
-		"@typescript-eslint/parser": "^4.8.1",
-		"eslint": "^7.14.0",
-		"eslint-plugin-import": "^2.22.1",
-		"typescript": "^4.1.2"
+		"@typescript-eslint/eslint-plugin": "^4.30.0",
+		"@typescript-eslint/parser": "^4.30.0",
+		"eslint": "^7.32.0",
+		"eslint-plugin-import": "^2.24.2",
+		"typescript": "^4.4.2"
 	},
 	"peerDependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.0.0",
-		"@typescript-eslint/parser": "^4.0.0",
-		"eslint": "^7.0.0",
-		"eslint-plugin-import": "^2.0.0",
-		"eslint-plugin-jsx-a11y": "^6.0.0",
-		"eslint-plugin-react": "^7.0.0",
-		"eslint-plugin-react-hooks": "^4.0.0",
-		"typescript": "^4.0.0"
+		"@typescript-eslint/eslint-plugin": "^4.30.0",
+		"@typescript-eslint/parser": "^4.30.0",
+		"eslint": "^7.32.0",
+		"eslint-plugin-import": "^2.24.2",
+		"eslint-plugin-jsx-a11y": "^6.4.1",
+		"eslint-plugin-react": "^7.25.1",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"typescript": "^4.4.2"
 	},
 	"peerDependenciesMeta": {
 		"eslint-plugin-jsx-a11y": {
