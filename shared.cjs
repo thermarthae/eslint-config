@@ -3,6 +3,7 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 	],
+	plugins: ['simple-import-sort'],
 	parserOptions: {
 		ecmaVersion: 'latest',
 		project: 'tsconfig.json',
@@ -90,6 +91,32 @@ module.exports = {
 		'no-tabs': 0,
 		'no-void': ['error', {
 			allowAsStatement: true,
+		}],
+		'simple-import-sort/imports': ['warn', {
+			groups: [
+				// Side effect imports.
+				['^\\u0000'],
+				[
+					'^node:',
+					'react',
+					// Things that start with a letter (or digit or underscore), or `@` followed by a letter.
+					'^@?\\w',
+				],
+				// Absolute imports and other imports such as Vue-style `@/foo`.
+				['^'],
+				[
+					// ../whatever/
+					'^\\.\\./(?=.*/)',
+					// ../
+					'^\\.\\./',
+				],
+				[
+					// ./whatever/
+					'^\\./(?=.*/)',
+					// ./
+					'^\\./',
+				],
+			],
 		}],
 		yoda: ['error', 'never', {
 			exceptRange: true,
