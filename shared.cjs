@@ -4,13 +4,13 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended-requiring-type-checking',
 	],
 	parserOptions: {
-		ecmaVersion: 2021,
+		ecmaVersion: 'latest',
 		project: 'tsconfig.json',
 		warnOnUnsupportedTypeScriptVersion: false,
 	},
 	overrides: [
 		{
-			files: '*.js',
+			files: ['*.cjs', '*.js'],
 			rules: {
 				'@typescript-eslint/ban-ts-comment': 0,
 				'@typescript-eslint/no-unsafe-assignment': 0,

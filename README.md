@@ -22,7 +22,7 @@ yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescr
 
 Add `"extends": "@thermarthae/eslint-config"` to your ESLint config file.
 
-An example `.eslintrc.js`:
+An example `.eslintrc.cjs`:
 
 ```js
 module.exports = {

@@ -3,7 +3,7 @@ module.exports = {
 		'airbnb',
 		'airbnb-typescript',
 		'airbnb/hooks',
-		'./shared.js',
+		'./shared.cjs',
 	],
 	overrides: [
 		{

@@ -1,7 +1,7 @@
 {
 	"name": "@thermarthae/eslint-config",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "index.cjs",
 	"description": "Just a personal eslint config",
 	"license": "MIT",
 	"author": "thermarthae <thermarthae@protonmail.com>",
@@ -10,9 +10,9 @@
 		"url": "git+https://github.com/thermarthae/eslint-config.git"
 	},
 	"files": [
-		"base.js",
-		"index.js",
-		"shared.js"
+		"base.cjs",
+		"index.cjs",
+		"shared.cjs"
 	],
 	"packageManager": "yarn@3.4.1",
 	"scripts": {
