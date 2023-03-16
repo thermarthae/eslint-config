@@ -61,6 +61,7 @@ module.exports = {
 		}],
 		'import/no-cycle': 0,
 		'import/no-named-as-default': 0, // its not very performant
+		'linebreak-style': ['error', 'windows'],
 		'max-len': ['error', { code: 120 }],
 		'no-console': 0,
 		'no-multiple-empty-lines': ['error', {
@@ -76,6 +77,16 @@ module.exports = {
 			],
 			props: true,
 		}],
+		'no-restricted-exports': 0,
+		'no-restricted-syntax': [
+			'error',
+			{
+				selector: 'ForInStatement',
+				message: 'for..in loops iterate over the entire prototype chain,'
+					+ ' which is virtually never what you want. Use Object.{keys,values,entries},'
+					+ ' and iterate over the resulting array.',
+			},
+		],
 		'no-tabs': 0,
 		'no-void': ['error', {
 			allowAsStatement: true,
