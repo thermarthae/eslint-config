@@ -10,20 +10,29 @@ const customized = stylistic.configs.customize({
 
 module.exports = {
 	extends: [
+		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended-type-checked',
 		'plugin:@typescript-eslint/stylistic-type-checked',
 		'plugin:@stylistic/disable-legacy',
 	],
 	plugins: [
-		'@stylistic',
+		'@typescript-eslint',
+		'import',
 		'simple-import-sort',
+		'@stylistic',
 	],
+	parser: '@typescript-eslint/parser',
 	parserOptions: {
-		ecmaVersion: 'latest',
 		project: true,
-		warnOnUnsupportedTypeScriptVersion: false,
+		sourceType: 'module',
 	},
 	overrides: [
+		{
+			files: ['*.cjs'],
+			env: {
+				node: true,
+			},
+		},
 		{
 			files: ['*.cjs', '*.js'],
 			rules: {
@@ -34,21 +43,9 @@ module.exports = {
 				'@typescript-eslint/no-var-requires': 0,
 			},
 		},
-		{
-			files: '*.d.ts',
-			rules: {
-				'import/prefer-default-export': 0,
-			},
-		},
 	],
 	rules: {
 		...customized.rules,
-		'arrow-parens': 0,
-		'linebreak-style': 0,
-		'max-len': 0,
-		'no-multiple-empty-lines': 0,
-		'no-tabs': 0,
-
 		'@stylistic/arrow-parens': ['error', 'as-needed', {
 			requireForBlockBody: true,
 		}],
@@ -61,8 +58,7 @@ module.exports = {
 		}],
 		'@stylistic/max-statements-per-line': 0,
 		'@stylistic/indent-binary-ops': 0,
-
-
+		//
 		'@typescript-eslint/array-type': ['error', {
 			default: 'array-simple',
 		}],
@@ -72,41 +68,13 @@ module.exports = {
 		}],
 		'@typescript-eslint/consistent-type-definitions': 0,
 		'@typescript-eslint/no-unused-vars': 0,
+		'@typescript-eslint/no-empty-function': 0,
 		'@typescript-eslint/no-misused-promises': ['error', {
 			checksVoidReturn: false,
 		}],
 		'@typescript-eslint/no-unnecessary-type-arguments': 'warn',
 		'@typescript-eslint/promise-function-async': 'error',
-
-		'import/no-cycle': 0,
-		'import/no-named-as-default': 0, // its not very performant
-
-		'no-plusplus': 0,
-		'arrow-body-style': 0,
-		'consistent-return': 0, // annoys inside react hooks
-		'no-continue': 0,
-		'no-console': 0,
-		'no-param-reassign': ['error', {
-			ignorePropertyModificationsFor: [
-				'request',
-				'reply',
-				'session',
-			],
-			props: true,
-		}],
-		'no-restricted-exports': 0,
-		'no-restricted-syntax': [
-			'error',
-			{
-				selector: 'ForInStatement',
-				message: 'for..in loops iterate over the entire prototype chain,'
-					+ ' which is virtually never what you want. Use Object.{keys,values,entries},'
-					+ ' and iterate over the resulting array.',
-			},
-		],
-		'no-void': ['error', {
-			allowAsStatement: true,
-		}],
+		//
 		'simple-import-sort/imports': ['warn', {
 			groups: [
 				// Side effect imports.
@@ -133,8 +101,16 @@ module.exports = {
 				],
 			],
 		}],
-		yoda: ['error', 'never', {
-			exceptRange: true,
+		//
+		'no-param-reassign': ['error', {
+			ignorePropertyModificationsFor: [
+				'request',
+				'reply',
+				'session',
+			],
+			props: true,
 		}],
+		'no-void': ['error', { allowAsStatement: true }],
+		yoda: ['error', 'never', { exceptRange: true }],
 	},
 };
