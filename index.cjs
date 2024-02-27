@@ -6,16 +6,8 @@ module.exports = {
 		'plugin:react/jsx-runtime',
 		'./shared.cjs',
 	],
-	overrides: [
-		{
-			files: '*.tsx',
-			rules: {
-				'@typescript-eslint/member-ordering': 0, // `react/sort-comp` is handling this out
-				'consistent-return': 0, // annoys inside react hooks
-			},
-		},
-	],
 	rules: {
+		'react/no-unknown-property': 0,
 		'react/destructuring-assignment': 0,
 		'react/function-component-definition': 0,
 		'react/jsx-indent': ['error', 'tab'],

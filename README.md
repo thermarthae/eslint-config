@@ -9,13 +9,13 @@ Just a personalized [Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 This step assumes that you have already installed Eslint and Typescript.
 
 ```bash
-yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-simple-import-sort
+yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-simple-import-sort @stylistic/eslint-plugin
 ```
 
 If you don't need React support:
 
 ```bash
-yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-simple-import-sort
+yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-simple-import-sort @stylistic/eslint-plugin
 ```
 
 ### 2) Configure ESLint

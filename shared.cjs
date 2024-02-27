@@ -1,12 +1,26 @@
+const stylistic = require('@stylistic/eslint-plugin');
+
+const customized = stylistic.configs.customize({
+	indent: 'tab',
+	semi: true,
+	jsx: false,
+	braceStyle: '1tbs',
+	quoteProps: 'as-needed',
+});
+
 module.exports = {
 	extends: [
-		'plugin:@typescript-eslint/recommended',
-		'plugin:@typescript-eslint/recommended-requiring-type-checking',
+		'plugin:@typescript-eslint/recommended-type-checked',
+		'plugin:@typescript-eslint/stylistic-type-checked',
+		'plugin:@stylistic/disable-legacy',
 	],
-	plugins: ['simple-import-sort'],
+	plugins: [
+		'@stylistic',
+		'simple-import-sort',
+	],
 	parserOptions: {
 		ecmaVersion: 'latest',
-		project: 'tsconfig.json',
+		project: true,
 		warnOnUnsupportedTypeScriptVersion: false,
 	},
 	overrides: [
@@ -28,6 +42,27 @@ module.exports = {
 		},
 	],
 	rules: {
+		...customized.rules,
+		'arrow-parens': 0,
+		'linebreak-style': 0,
+		'max-len': 0,
+		'no-multiple-empty-lines': 0,
+		'no-tabs': 0,
+
+		'@stylistic/arrow-parens': ['error', 'as-needed', {
+			requireForBlockBody: true,
+		}],
+		'@stylistic/linebreak-style': ['error', 'windows'],
+		'@stylistic/max-len': ['error', { code: 120 }],
+		'@stylistic/no-multiple-empty-lines': ['error', {
+			max: 3,
+			maxBOF: 0,
+			maxEOF: 1,
+		}],
+		'@stylistic/max-statements-per-line': 0,
+		'@stylistic/indent-binary-ops': 0,
+
+
 		'@typescript-eslint/array-type': ['error', {
 			default: 'array-simple',
 		}],
@@ -35,41 +70,22 @@ module.exports = {
 			assertionStyle: 'as',
 			objectLiteralTypeAssertions: 'allow-as-parameter',
 		}],
-		'@typescript-eslint/explicit-module-boundary-types': 0,
-		'@typescript-eslint/indent': ['error', 'tab'],
-		'@typescript-eslint/member-delimiter-style': ['error', {
-			multiline: {
-				delimiter: 'semi',
-				requireLast: true,
-			},
-			singleline: {
-				delimiter: 'semi',
-				requireLast: false,
-			},
-		}],
-		'@typescript-eslint/member-ordering': 'error',
-		'@typescript-eslint/no-explicit-any': 0,
+		'@typescript-eslint/consistent-type-definitions': 0,
+		'@typescript-eslint/no-unused-vars': 0,
 		'@typescript-eslint/no-misused-promises': ['error', {
 			checksVoidReturn: false,
 		}],
-		'@typescript-eslint/no-non-null-assertion': 0,
-		'@typescript-eslint/no-unnecessary-type-arguments': 'error',
-		'@typescript-eslint/no-unsafe-assignment': 0, // its not very performant
-		'@typescript-eslint/prefer-optional-chain': 'error',
+		'@typescript-eslint/no-unnecessary-type-arguments': 'warn',
 		'@typescript-eslint/promise-function-async': 'error',
-		'arrow-parens': ['error', 'as-needed', {
-			requireForBlockBody: true,
-		}],
+
 		'import/no-cycle': 0,
 		'import/no-named-as-default': 0, // its not very performant
-		'linebreak-style': ['error', 'windows'],
-		'max-len': ['error', { code: 120 }],
+
+		'no-plusplus': 0,
+		'arrow-body-style': 0,
+		'consistent-return': 0, // annoys inside react hooks
+		'no-continue': 0,
 		'no-console': 0,
-		'no-multiple-empty-lines': ['error', {
-			max: 3,
-			maxBOF: 0,
-			maxEOF: 1,
-		}],
 		'no-param-reassign': ['error', {
 			ignorePropertyModificationsFor: [
 				'request',
@@ -88,7 +104,6 @@ module.exports = {
 					+ ' and iterate over the resulting array.',
 			},
 		],
-		'no-tabs': 0,
 		'no-void': ['error', {
 			allowAsStatement: true,
 		}],
