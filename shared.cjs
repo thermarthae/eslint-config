@@ -107,6 +107,7 @@ module.exports = {
 				'request',
 				'reply',
 				'session',
+				'state',
 			],
 			props: true,
 		}],
