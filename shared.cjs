@@ -73,6 +73,7 @@ module.exports = {
 			checksVoidReturn: false,
 		}],
 		'@typescript-eslint/no-unnecessary-type-arguments': 'warn',
+		'@typescript-eslint/no-shadow': 'error',
 		'@typescript-eslint/promise-function-async': 'error',
 		//
 		'simple-import-sort/imports': ['warn', {
