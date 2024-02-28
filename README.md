@@ -1,6 +1,6 @@
 # @thermarthae/eslint-config
 
-Just a personalized [Airbnb](https://www.npmjs.com/package/eslint-config-airbnb) Eslint config.
+Just an Eslint config.
 
 ## ✨ Setup
 
@@ -27,7 +27,7 @@ An example `.eslintrc.cjs`:
 ```js
 module.exports = {
 	// If you don't need React support:
-	// extends: ['@thermarthae/eslint-config/base'],
+	// extends: ['@thermarthae/eslint-config/base.cjs'],
 	extends: ['@thermarthae/eslint-config'],
 };
 ```
