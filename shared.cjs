@@ -14,10 +14,11 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended-type-checked',
 		'plugin:@typescript-eslint/stylistic-type-checked',
 		'plugin:@stylistic/disable-legacy',
+		'plugin:import/recommended',
+		'plugin:import/typescript',
 	],
 	plugins: [
 		'@typescript-eslint',
-		'import',
 		'simple-import-sort',
 		'@stylistic',
 	],
@@ -25,6 +26,10 @@ module.exports = {
 	parserOptions: {
 		project: true,
 		sourceType: 'module',
+		ecmaVersion: 'latest',
+	},
+	settings: {
+		'import/external-module-folders': ['.yarn', 'node_modules', 'node_modules/@types'],
 	},
 	overrides: [
 		{
