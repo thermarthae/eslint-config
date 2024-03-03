@@ -9,13 +9,13 @@ Just an Eslint config.
 This step assumes that you have already installed Eslint and Typescript.
 
 ```bash
-yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-simple-import-sort @stylistic/eslint-plugin
+yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import@npm:eslint-plugin-i@latest eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-simple-import-sort @stylistic/eslint-plugin
 ```
 
 If you don't need React support:
 
 ```bash
-yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import eslint-plugin-simple-import-sort @stylistic/eslint-plugin
+yarn add -D @thermarthae/eslint-config @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-import@npm:eslint-plugin-i@latest eslint-plugin-simple-import-sort @stylistic/eslint-plugin
 ```
 
 ### 2) Configure ESLint
