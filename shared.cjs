@@ -30,6 +30,9 @@ module.exports = {
 	},
 	settings: {
 		'import/external-module-folders': ['.yarn', 'node_modules', 'node_modules/@types'],
+		'import/resolver': {
+			typescript: true,
+		},
 	},
 	overrides: [
 		{
