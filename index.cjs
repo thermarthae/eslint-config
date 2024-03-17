@@ -13,6 +13,8 @@ module.exports = {
 		},
 	},
 	rules: {
+		'react/jsx-indent': ['error', 'tab', { checkAttributes: true, indentLogicalExpressions: true }],
+		'react/jsx-indent-props': ['error', 'tab'],
 		'react/no-unknown-property': 0,
 		'react/no-children-prop': 0,
 		'react/prop-types': 0,
