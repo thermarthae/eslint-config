@@ -30,9 +30,6 @@ module.exports = {
 	},
 	settings: {
 		'import/external-module-folders': ['.yarn', 'node_modules', 'node_modules/@types'],
-		'import/resolver': {
-			typescript: true,
-		},
 	},
 	overrides: [
 		{
@@ -83,6 +80,10 @@ module.exports = {
 		'@typescript-eslint/no-unnecessary-type-arguments': 'warn',
 		'@typescript-eslint/no-shadow': 'error',
 		'@typescript-eslint/promise-function-async': 'error',
+		//
+		'import/no-unresolved': 0,
+		// TODO: https://github.com/import-js/eslint-plugin-import/pull/2813
+		// 'import/extensions': ['error', 'always', { ignorePackages: true }],
 		//
 		'simple-import-sort/imports': ['warn', {
 			groups: [
