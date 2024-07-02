@@ -112,6 +112,7 @@ module.exports = {
 			],
 		}],
 		//
+		'object-shorthand': ['error', 'always', { avoidQuotes: true }],
 		'no-param-reassign': ['error', {
 			ignorePropertyModificationsFor: [
 				'request',
