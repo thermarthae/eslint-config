@@ -20,9 +20,9 @@ yarn add -D @thermarthae/eslint-config @eslint/js typescript-eslint eslint-plugi
 
 ### 2) Configure ESLint
 
-Add `"extends": "@thermarthae/eslint-config"` to your ESLint config file.
+An example `eslint.config.js`:
 
-An example `.eslintrc.cjs`:
+**Note**: You may have to set the `tsconfigRootDir` path!
 
 ```js
 // If you don't need React support:
