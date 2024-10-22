@@ -4,7 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import stylistic from '@stylistic/eslint-plugin';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
-import shared from './shared.js';
+import base from './base.js';
 
 const stylisticCustomizedWithJSX = stylistic.configs.customize({
 	flat: true,
@@ -20,7 +20,7 @@ const jsxStylisticRules = Object.fromEntries(Object.entries(stylisticCustomizedW
 
 /** @type {typeof import('typescript-eslint').configs.all} */
 const main = [
-	...shared,
+	...base,
 	//
 	// react
 	//
