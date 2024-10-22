@@ -21,6 +21,7 @@ const base = [
 	{
 		rules: {
 			'object-shorthand': ['error', 'always', { avoidQuotes: true }],
+			'no-duplicate-imports': 'error',
 			'no-param-reassign': ['error', {
 				ignorePropertyModificationsFor: [
 					'request',
