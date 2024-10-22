@@ -1,8 +1,9 @@
 {
 	"name": "@thermarthae/eslint-config",
 	"version": "4.1.0",
-	"main": "index.cjs",
+	"main": "index.js",
 	"description": "Just a personal eslint config",
+	"type": "module",
 	"license": "MIT",
 	"author": "thermarthae <thermarthae@protonmail.com>",
 	"repository": {
@@ -10,42 +11,39 @@
 		"url": "git+https://github.com/thermarthae/eslint-config.git"
 	},
 	"files": [
-		"base.cjs",
-		"index.cjs",
-		"shared.cjs"
+		"base.js",
+		"index.js",
+		"shared.js"
 	],
-	"packageManager": "yarn@4.3.1",
+	"packageManager": "yarn@4.5.1+sha512.341db9396b6e289fecc30cd7ab3af65060e05ebff4b3b47547b278b9e67b08f485ecd8c79006b405446262142c7a38154445ef7f17c1d5d1de7d90bf9ce7054d",
 	"scripts": {
 		"pnpify": "yarn dlx @yarnpkg/sdks vscode"
 	},
-	"resolutions": {
-		"@stylistic/eslint-plugin-plus/@typescript-eslint/utils": "^7.15.0",
-		"@stylistic/eslint-plugin-ts/@typescript-eslint/utils": "^7.15.0"
-	},
 	"devDependencies": {
-		"@stylistic/eslint-plugin": "^2.3.0",
-		"@typescript-eslint/eslint-plugin": "^7.15.0",
-		"@typescript-eslint/parser": "^7.15.0",
-		"eslint": "^8.57.0",
-		"eslint-plugin-import": "npm:eslint-plugin-i@^2.29.1",
-		"eslint-plugin-simple-import-sort": "^12.1.0",
-		"typescript": "^5.5.3"
+		"@eslint/js": "^9.13.0",
+		"@stylistic/eslint-plugin": "^2.9.0",
+		"@types/eslint-plugin-jsx-a11y": "^6.9.0",
+		"@types/eslint__js": "^8.42.3",
+		"@types/node": "^22.7.8",
+		"eslint": "^9.13.0",
+		"eslint-plugin-jsx-a11y": "^6.10.1",
+		"eslint-plugin-react": "^7.37.1",
+		"eslint-plugin-react-hooks": "^5.0.0",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"typescript": "^5.6.3",
+		"typescript-eslint": "^8.11.0"
 	},
 	"peerDependencies": {
-		"@stylistic/eslint-plugin": "^1.6.2 || ^2.0.0",
-		"@typescript-eslint/parser": "^6.20.0 || ^7.1.0",
-		"eslint": "^8.56.0",
-		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-react": "^7.33.2",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-simple-import-sort": "^12.0.0",
-		"typescript": "^5.3.3"
+		"@stylistic/eslint-plugin": "^2.9.0",
+		"eslint": "^9.13.0",
+		"eslint-plugin-jsx-a11y": "^6.10.1",
+		"eslint-plugin-react": "^7.37.1",
+		"eslint-plugin-react-hooks": "^5.0.0",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"typescript": "^5.6.3",
+		"typescript-eslint": "^8.11.0"
 	},
 	"peerDependenciesMeta": {
-		"eslint-config-prettier": {
-			"optional": true
-		},
 		"eslint-plugin-jsx-a11y": {
 			"optional": true
 		},
