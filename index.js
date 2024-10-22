@@ -15,6 +15,7 @@ const stylisticCustomizedWithJSX = stylistic.configs.customize({
 	quoteProps: 'as-needed',
 });
 
+// all `stylisticCustomizedWithJSX` rules that starts with '@stylistic/jsx'
 const jsxStylisticRules = Object.fromEntries(Object.entries(stylisticCustomizedWithJSX.rules ?? {})
 	.filter(r => r[0].startsWith('@stylistic/jsx')));
 
@@ -70,6 +71,12 @@ const main = [
 	//
 	// stylistic
 	//
+	{
+		// all `disable-legacy` rules that starts with 'react/'
+		...stylistic.configs['disable-legacy'],
+		rules: Object.fromEntries(Object.entries(stylistic.configs['disable-legacy'].rules ?? {})
+			.filter(r => r[0].startsWith('react/'))),
+	},
 	{
 		rules: {
 			...jsxStylisticRules,

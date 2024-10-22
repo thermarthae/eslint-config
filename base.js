@@ -73,9 +73,12 @@ const base = [
 	//
 	// stylistic
 	//
-	stylistic.configs['disable-legacy'],
-	// TODO: why rules are overwritten
-	// stylisticCustomized
+	{
+		// `disable-legacy` without rules that starts with 'react/'
+		...stylistic.configs['disable-legacy'],
+		rules: Object.fromEntries(Object.entries(stylistic.configs['disable-legacy'].rules ?? {})
+			.filter(r => !r[0].startsWith('react/'))),
+	},
 	{
 		...stylisticCustomized,
 		rules: {
