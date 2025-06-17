@@ -1,7 +1,18 @@
 {
 	"name": "@thermarthae/eslint-config",
 	"version": "5.0.0",
-	"main": "index.js",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"import": "./index.js",
+			"default": "./index.js"
+		},
+		"./base": {
+			"types": "./base.d.ts",
+			"import": "./base.js",
+			"default": "./base.js"
+		}
+	},
 	"description": "Just a personal eslint config",
 	"type": "module",
 	"license": "MIT",
