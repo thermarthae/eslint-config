@@ -1,5 +1,4 @@
 import react from 'eslint-plugin-react';
-// @ts-expect-error no types :/
 import reactHooks from 'eslint-plugin-react-hooks';
 import stylistic from '@stylistic/eslint-plugin';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
@@ -7,7 +6,6 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import base from './base.js';
 
 const stylisticCustomizedWithJSX = stylistic.configs.customize({
-	flat: true,
 	indent: 'tab',
 	semi: true,
 	jsx: true,
@@ -25,11 +23,8 @@ const main = [
 	//
 	// react
 	//
-	// react.configs.flat.recommended,
-	// react.configs.flat['jsx-runtime'],
-	// TODO: wait for a types fix
-	/** @type {typeof import('typescript-eslint').configs.base} */ (react.configs.flat.recommended),
-	/** @type {typeof import('typescript-eslint').configs.base} */ (react.configs.flat['jsx-runtime']),
+	react.configs.flat.recommended,
+	react.configs.flat['jsx-runtime'],
 	{
 		settings: {
 			react: {
@@ -56,14 +51,7 @@ const main = [
 	//
 	// react-hooks
 	//
-	// TODO: wait for a native flat support
-	{
-		files: ['**/**/*.{js,ts,jsx,tsx}'],
-		plugins: {
-			'react-hooks': reactHooks,
-		},
-		rules: reactHooks.configs.recommended.rules,
-	},
+	reactHooks.configs['recommended-latest'],
 	//
 	// jsx-a11y
 	//

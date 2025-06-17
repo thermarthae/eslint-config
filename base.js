@@ -4,7 +4,6 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tsEslint from 'typescript-eslint';
 
 const stylisticCustomized = stylistic.configs.customize({
-	flat: true,
 	indent: 'tab',
 	semi: true,
 	jsx: false,
