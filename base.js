@@ -1,7 +1,7 @@
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import tsEslint from 'typescript-eslint';
+import tsESLint from 'typescript-eslint';
 
 const stylisticCustomized = stylistic.configs.customize({
 	indent: 'tab',
@@ -11,7 +11,7 @@ const stylisticCustomized = stylistic.configs.customize({
 	quoteProps: 'as-needed',
 });
 
-/** @type {typeof import('typescript-eslint').configs.all} */
+/** @type {import('eslint').Linter.Config[]} */
 const base = [
 	//
 	// eslint
@@ -37,12 +37,8 @@ const base = [
 	//
 	// typescript-eslint
 	//
-	...tsEslint.configs.recommendedTypeChecked,
-	...tsEslint.configs.stylisticTypeChecked,
-	{
-		...tsEslint.configs.disableTypeChecked,
-		files: ['*.cjs', '*.js'],
-	},
+	...tsESLint.configs.recommendedTypeChecked,
+	...tsESLint.configs.stylisticTypeChecked,
 	{
 		languageOptions: {
 			parserOptions: {
@@ -55,7 +51,6 @@ const base = [
 				default: 'array-simple',
 			}],
 			'@typescript-eslint/consistent-type-assertions': ['error', {
-				assertionStyle: 'as',
 				objectLiteralTypeAssertions: 'allow-as-parameter',
 			}],
 			'@typescript-eslint/consistent-type-definitions': 0,
@@ -68,6 +63,10 @@ const base = [
 			'@typescript-eslint/no-shadow': 'error',
 			'@typescript-eslint/promise-function-async': 'error',
 		},
+	},
+	{
+		...tsESLint.configs.disableTypeChecked,
+		files: ['*.cjs', '*.js'],
 	},
 	//
 	// stylistic

@@ -27,33 +27,33 @@
 		"index.js",
 		"index.d.ts"
 	],
-	"packageManager": "yarn@4.9.2+sha512.1fc009bc09d13cfd0e19efa44cbfc2b9cf6ca61482725eb35bbc5e257e093ebf4130db6dfe15d604ff4b79efd8e1e8e99b25fa7d0a6197c9f9826358d4d65c3c",
+	"packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
 	"scripts": {
 		"pnpify": "yarn dlx @yarnpkg/sdks vscode"
 	},
 	"devDependencies": {
-		"@eslint/js": "^9.29.0",
-		"@stylistic/eslint-plugin": "^4.4.1",
-		"@types/eslint-plugin-jsx-a11y": "^6.10.0",
-		"@types/node": "^24.0.3",
-		"eslint": "^9.29.0",
+		"@eslint/js": "^9.37.0",
+		"@stylistic/eslint-plugin": "^5.4.0",
+		"@types/eslint-plugin-jsx-a11y": "^6.10.1",
+		"@types/node": "^24.6.2",
+		"eslint": "^9.37.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"eslint-plugin-react": "^7.37.5",
-		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-hooks": "^6.1.1",
 		"eslint-plugin-simple-import-sort": "^12.1.1",
-		"typescript": "^5.8.3",
-		"typescript-eslint": "^8.34.1"
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.45.0"
 	},
 	"peerDependencies": {
-		"@eslint/js": "^9.29.0",
-		"@stylistic/eslint-plugin": "^4.4.1 || ^5.0.0",
-		"eslint": "^9.29.0",
+		"@eslint/js": "^9.37.0",
+		"@stylistic/eslint-plugin": "^5.4.0",
+		"eslint": "^9.37.0",
 		"eslint-plugin-jsx-a11y": "^6.10.2",
 		"eslint-plugin-react": "^7.37.5",
-		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-hooks": "^6.1.1",
 		"eslint-plugin-simple-import-sort": "^12.1.1",
-		"typescript": "^5.8.3",
-		"typescript-eslint": "^8.34.1"
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.45.0"
 	},
 	"peerDependenciesMeta": {
 		"eslint-plugin-jsx-a11y": {

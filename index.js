@@ -17,7 +17,7 @@ const stylisticCustomizedWithJSX = stylistic.configs.customize({
 const jsxStylisticRules = Object.fromEntries(Object.entries(stylisticCustomizedWithJSX.rules ?? {})
 	.filter(r => r[0].startsWith('@stylistic/jsx')));
 
-/** @type {typeof import('typescript-eslint').configs.all} */
+/** @type {import('eslint').Linter.Config[]} */
 const main = [
 	...base,
 	//
@@ -51,7 +51,7 @@ const main = [
 	//
 	// react-hooks
 	//
-	reactHooks.configs['recommended-latest'],
+	...reactHooks.configs['recommended-latest'],
 	//
 	// jsx-a11y
 	//
@@ -76,7 +76,6 @@ const main = [
 			}],
 			'@stylistic/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
 			'@stylistic/jsx-self-closing-comp': 'error',
-			'@stylistic/jsx-props-no-multi-spaces': 'error',
 		},
 	},
 ];

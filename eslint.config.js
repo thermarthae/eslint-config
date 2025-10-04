@@ -1,6 +1,6 @@
 import base from './base.js';
 
-/** @type {typeof import('typescript-eslint').configs.all} */
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
 	...base,
 	{
