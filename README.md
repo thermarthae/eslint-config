@@ -1,21 +1,15 @@
 # @thermarthae/eslint-config
 
-Just an Eslint config.
+Just an ESLint config.
 
 ## ✨ Setup
 
 ### 1) Install
 
-This step assumes that you have already installed Eslint and Typescript.
+This step assumes that you have already installed ESLint and Typescript.
 
 ```bash
-yarn add -D @thermarthae/eslint-config @eslint/js typescript-eslint eslint-plugin-simple-import-sort @stylistic/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
-```
-
-If you don't need React support:
-
-```bash
-yarn add -D @thermarthae/eslint-config @eslint/js typescript-eslint eslint-plugin-simple-import-sort @stylistic/eslint-plugin
+yarn add -D @thermarthae/eslint-config
 ```
 
 ### 2) Configure ESLint
