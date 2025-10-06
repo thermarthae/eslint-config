@@ -37,7 +37,7 @@ const base = [
 	//
 	// typescript-eslint
 	//
-	...tsESLint.configs.recommendedTypeChecked,
+	...tsESLint.configs.strictTypeChecked,
 	...tsESLint.configs.stylisticTypeChecked,
 	{
 		languageOptions: {
@@ -54,14 +54,38 @@ const base = [
 				objectLiteralTypeAssertions: 'allow-as-parameter',
 			}],
 			'@typescript-eslint/consistent-type-definitions': 0,
-			'@typescript-eslint/no-unused-vars': 0,
+			'@typescript-eslint/consistent-type-imports': 'error',
+			'@typescript-eslint/no-confusing-void-expression': 0,
 			'@typescript-eslint/no-empty-function': 0,
+			'@typescript-eslint/no-extraneous-class': ['error', {
+				allowConstructorOnly: false,
+				allowEmpty: false,
+				allowStaticOnly: true,
+				allowWithDecorator: false,
+			}],
+			'@typescript-eslint/no-import-type-side-effects': 'error',
 			'@typescript-eslint/no-misused-promises': ['error', {
 				checksVoidReturn: false,
 			}],
-			'@typescript-eslint/no-unnecessary-type-arguments': 'warn',
+			'@typescript-eslint/no-non-null-assertion': 0,
 			'@typescript-eslint/no-shadow': 'error',
+			'@typescript-eslint/no-unused-vars': 0,
 			'@typescript-eslint/promise-function-async': 'error',
+			'@typescript-eslint/restrict-plus-operands': ['error', {
+				allowAny: false,
+				allowBoolean: true,
+				allowNullish: true,
+				allowNumberAndString: true,
+				allowRegExp: false,
+			}],
+			'@typescript-eslint/restrict-template-expressions': ['error', {
+				allowAny: false,
+				allowBoolean: true,
+				allowNever: false,
+				allowNullish: true,
+				allowNumber: true,
+				allowRegExp: false,
+			}],
 		},
 	},
 	{
