@@ -51,7 +51,7 @@ const main = [
 	//
 	// react-hooks
 	//
-	...reactHooks.configs['recommended-latest'],
+	reactHooks.configs.flat['recommended-latest'],
 	//
 	// jsx-a11y
 	//
