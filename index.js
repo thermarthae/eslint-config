@@ -1,5 +1,4 @@
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
+import react from '@eslint-react/eslint-plugin';
 import stylistic from '@stylistic/eslint-plugin';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 
@@ -23,35 +22,21 @@ const main = [
 	//
 	// react
 	//
-	react.configs.flat.recommended,
-	react.configs.flat['jsx-runtime'],
+	react.configs['strict-type-checked'],
 	{
-		settings: {
-			react: {
-				version: 'detect',
-			},
-		},
 		rules: {
-			'react/react-in-jsx-scope': 0,
-			'react/no-unknown-property': 0,
-			'react/no-children-prop': 0,
-			'react/prop-types': 0,
-			'react/jsx-boolean-value': ['error', 'never', { always: [] }],
-			'react/void-dom-elements-no-children': 'error',
-			'react/button-has-type': ['error', {
-				button: true,
-				submit: true,
-				reset: false,
-			}],
-			'react/jsx-no-useless-fragment': 'error',
-			'react/jsx-no-constructed-context-values': 'error',
-			'react/no-unstable-nested-components': 'error',
+			'@eslint-react/prefer-destructuring-assignment': 0,
+			'@eslint-react/jsx-no-children-prop': 0,
 		},
 	},
-	//
-	// react-hooks
-	//
-	reactHooks.configs.flat['recommended-latest'],
+	{
+		...react.configs['disable-jsx'],
+		files: ['*.cjs', '*.js'],
+	},
+	{
+		...react.configs['disable-type-checked'],
+		files: ['*.cjs', '*.js'],
+	},
 	//
 	// jsx-a11y
 	//
